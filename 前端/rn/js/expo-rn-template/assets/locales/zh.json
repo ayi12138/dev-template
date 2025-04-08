@@ -1,0 +1,137 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "retry": "重试",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "edit": "编辑",
+    "delete": "删除",
+    "back": "返回",
+    "next": "下一步",
+    "submit": "提交",
+    "search": "搜索",
+    "noData": "暂无数据"
+  },
+  "login": {
+    "title": "登录",
+    "username": "用户名",
+    "password": "密码",
+    "button": "登录",
+    "registerLink": "没有账号？立即注册",
+    "error": "登录失败，请检查用户名和密码"
+  },
+  "register": {
+    "title": "注册",
+    "username": "用户名",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "email": "邮箱",
+    "phone": "手机号",
+    "selectRole": "选择角色",
+    "roles": {
+      "manager": "管理员",
+      "worker": "工作者",
+      "user": "用户"
+    },
+    "button": "注册",
+    "loginLink": "已有账号？立即登录",
+    "success": "注册成功",
+    "error": "注册失败",
+    "errors": {
+      "usernameRequired": "用户名不能为空",
+      "usernameMinLength": "用户名至少4个字符",
+      "usernameMaxLength": "用户名最多20个字符",
+      "emailRequired": "邮箱不能为空",
+      "phoneRequired": "手机号不能为空",
+      "invalidEmail": "邮箱格式不正确",
+      "invalidPhone": "手机号格式不正确",
+      "passwordRequired": "密码不能为空",
+      "passwordMinLength": "密码至少6个字符",
+      "confirmPasswordRequired": "请确认密码",
+      "passwordsNotMatch": "两次输入的密码不一致",
+      "registrationFailed": "注册失败，请重试"
+    }
+  },
+  "home": {
+    "title": "首页",
+    "welcome": "欢迎",
+    "guest": "访客",
+    "description": "高效管理您的企业资源",
+    "features": {
+      "users": "用户管理",
+      "profile": "个人资料",
+      "settings": "设置",
+      "analytics": "数据分析"
+    },
+    "comingSoon": "即将推出",
+    "currentTheme": "当前主题",
+    "dark": "深色",
+    "light": "浅色"
+  },
+  "users": {
+    "title": "用户管理",
+    "addUser": "添加用户",
+    "noUsers": "未找到用户",
+    "email": "邮箱",
+    "phone": "手机号",
+    "createTime": "创建时间",
+    "actions": "操作",
+    "deleteConfirm": "确定要删除此用户吗？",
+    "username": "用户名",
+    "roles": "角色",
+    "deleteConfirmTitle": "删除用户",
+    "deleteConfirmMessage": "确定要删除用户 {username} 吗？",
+    "deleteError": "删除用户失败",
+    "updateSuccess": "用户更新成功",
+    "createSuccess": "用户创建成功",
+    "saveError": "保存用户失败",
+    "loadError": "加载用户数据失败"
+  },
+  "profile": {
+    "title": "个人中心",
+    "logoutConfirm": "确定要退出登录吗？",
+    "basicInfo": "基本信息",
+    "notLoggedIn": "您尚未登录",
+    "login": "登录",
+    "email": "电子邮箱",
+    "phone": "手机号码",
+    "notSet": "未设置",
+    "registrationDate": "注册日期",
+    "settings": "设置",
+    "theme": "应用主题",
+    "language": "语言",
+    "help": "帮助中心",
+    "logout": "退出登录",
+    "logoutConfirmTitle": "确认退出",
+    "logoutConfirmMessage": "确定要退出登录吗？",
+    "editProfile": "编辑资料"
+  },
+  "settings": {
+    "title": "设置",
+    "appearance": "外观",
+    "darkMode": "深色模式",
+    "language": "语言",
+    "english": "英文",
+    "chinese": "中文",
+    "notifications": "通知",
+    "privacy": "隐私",
+    "about": "关于",
+    "version": "版本"
+  },
+  "errors": {
+    "required": "此字段为必填项",
+    "invalidEmail": "邮箱格式不正确",
+    "invalidPhone": "手机号格式不正确",
+    "passwordLength": "密码长度至少6位",
+    "passwordMismatch": "两次输入的密码不一致",
+    "networkError": "网络错误，请稍后重试",
+    "unauthorized": "未授权，请重新登录"
+  },
+  "success": {
+    "saved": "保存成功",
+    "updated": "更新成功",
+    "deleted": "删除成功"
+  }
+}

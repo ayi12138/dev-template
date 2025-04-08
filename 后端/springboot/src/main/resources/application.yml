@@ -1,0 +1,18 @@
+server:
+  servlet:
+    context-path: /api
+  port: 8888
+
+spring:
+  application:
+    name: example
+  datasource:
+    ## 8.217.144.144
+    url: jdbc:mysql://localhost:3306/noble_builder_app?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    ## Lxf277.Lxn659
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+

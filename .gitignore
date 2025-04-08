@@ -1,0 +1,24 @@
+# 忽略所有项目的依赖目录
+**/node_modules/
+**/bower_components/
+**/vendor/
+
+# 忽略IDE特定文件
+**/.idea/
+**/.vscode/
+**/*.swp
+
+# 忽略构建产物
+**/build/
+**/dist/
+**/target/
+**/.expo/
+
+# 忽略系统文件
+**/.DS_Store
+**/Thumbs.db
+
+# 忽略环境配置文件（但允许示例文件）
+**/.env
+**/.env.production
+!**/.env.development
