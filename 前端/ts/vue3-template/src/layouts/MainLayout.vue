@@ -11,8 +11,9 @@
         class="el-menu-vertical-demo" 
         :collapse="isCollapse"
         style="border-right: none;"
+        :router="true"
         >
-          <el-menu-item index="1">
+          <el-menu-item index="/home">
             <el-icon><Histogram /></el-icon>
             <template #title>
               <span>首页</span>
@@ -21,9 +22,9 @@
           <el-sub-menu index="2">
             <template #title>
               <el-icon><HomeFilled /></el-icon>
-              <span>Navigator One</span>
+              <span>系统管理</span>
             </template>
-            <el-menu-item index="2-1">item one</el-menu-item>
+            <el-menu-item index="/user">用户管理</el-menu-item>
             <el-menu-item index="2-2">item two</el-menu-item>
             <el-menu-item index="2-3">item three</el-menu-item>
             <el-sub-menu index="2-4">
@@ -77,7 +78,7 @@
       <el-main>
         <el-breadcrumb class="breadcrumb">
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>当前页面</el-breadcrumb-item>
+          <el-breadcrumb-item>{{ route.meta.title }}</el-breadcrumb-item>
         </el-breadcrumb>
         <router-view />
       </el-main>
@@ -85,7 +86,7 @@
   </el-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { HomeFilled, Fold, Expand, Tools, Histogram, Menu } from '@element-plus/icons-vue'
@@ -198,4 +199,5 @@ const toggleCollapse = () => store.toggleCollapse()
 .breadcrumb {
   margin-bottom: 20px; /* 底部外边距 */
 }
+
 </style>

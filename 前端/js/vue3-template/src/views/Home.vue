@@ -23,5 +23,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { House, Calendar, Search } from "@element-plus/icons-vue";
+const input1 = ref("");
 </script>
