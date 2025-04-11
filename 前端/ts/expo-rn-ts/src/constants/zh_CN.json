@@ -1,0 +1,48 @@
+{
+  "auth": {
+    "username": "用户名",
+    "password": "密码",
+    "login": "登录",
+    "register": "注册",
+    "role": "角色",
+    "user": "普通用户",
+    "worker": "工作人员",
+    "welcome": "欢迎回来",
+    "noAccount": "还没有账号？",
+    "hasAccount": "已有账号？",
+    "forgotPassword": "忘记密码？",
+    "loginError": "登录失败",
+    "registerError": "注册失败",
+    "registerSubtitle": "创建您的账号",
+    "back": "返回"
+  },
+  "common": {
+    "home": "首页",
+    "settings": "设置",
+    "theme": "主题",
+    "language": "语言",
+    "logout": "退出登录",
+    "confirm": "确认",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "back": "返回",
+    "lightTheme": "浅色主题",
+    "darkTheme": "深色主题",
+    "logoutConfirm": "确定要退出登录吗？",
+    "error": "错误",
+    "logoutError": "退出登录失败，请重试"
+  },
+  "home": {
+    "user": {
+      "title": "用户首页"
+    },
+    "worker": {
+      "title": "工作人员首页"
+    },
+    "manager": {
+      "title": "管理员首页"
+    }
+  }
+} 

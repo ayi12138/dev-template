@@ -22,7 +22,5 @@ public class CustomerException extends RuntimeException{
         this.code = 500;
         this.msg = msg;
     }
-    public CustomerException() {
 
-    }
 }

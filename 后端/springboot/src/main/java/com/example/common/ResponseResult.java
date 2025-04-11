@@ -36,7 +36,7 @@ public class ResponseResult<T> {
     }
     public static<T> ResponseResult<T> error(int code, String msg) {
         ResponseResult<T> ResponseResult = new ResponseResult<>();
-        ResponseResult.setCode(500);
+        ResponseResult.setCode(code);
         ResponseResult.setMsg(msg);
         return ResponseResult;
     }

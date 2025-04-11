@@ -1,0 +1,48 @@
+{
+  "auth": {
+    "username": "Username",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register",
+    "role": "Role",
+    "user": "User",
+    "worker": "Worker",
+    "welcome": "Welcome Back",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "forgotPassword": "Forgot Password?",
+    "loginError": "Login Failed",
+    "registerError": "Registration Failed",
+    "registerSubtitle": "Create your account",
+    "back": "Back"
+  },
+  "common": {
+    "home": "Home",
+    "settings": "Settings",
+    "theme": "Theme",
+    "language": "Language",
+    "logout": "Logout",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "lightTheme": "Light Theme",
+    "darkTheme": "Dark Theme",
+    "logoutConfirm": "Are you sure you want to logout?",
+    "error": "Error",
+    "logoutError": "Logout failed, please try again"
+  },
+  "home": {
+    "user": {
+      "title": "User Home"
+    },
+    "worker": {
+      "title": "Worker Home"
+    },
+    "manager": {
+      "title": "Manager Home"
+    }
+  }
+} 

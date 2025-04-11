@@ -1,18 +1,25 @@
 server:
   servlet:
-    context-path: /api
-  port: 8888
+    context-path: /app-api
+  port: 3000
 
 spring:
   application:
     name: example
   datasource:
-    ## 8.217.144.144
-    url: jdbc:mysql://localhost:3306/noble_builder_app?serverTimezone=UTC&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&characterEncoding=utf-8
     username: root
-    ## Lxf277.Lxn659
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+mybatis:
+  # 扫描实体类，类型别名
+  type-aliases-package: com.example.entity
+  # 扫描mapper文件
+  mapper-locations: classpath:mapper/*.xml
 
-
+  configuration:
+    # 日志输出
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 数据库中的下划线转成驼峰
+    map-underscore-to-camel-case: true
