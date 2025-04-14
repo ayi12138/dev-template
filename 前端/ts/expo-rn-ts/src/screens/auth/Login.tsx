@@ -7,7 +7,7 @@ import {
   Text,
   KeyboardAvoidingView,
   Platform,
-  Image,
+  Alert,
 } from 'react-native';
 import { useI18n } from '../../contexts/I18nContext';
 import { useTheme } from '../../contexts/ThemeContext';
@@ -26,17 +26,37 @@ export default function LoginScreen({ navigation }: AuthScreenProps) {
   // 使用自定义 hooks 获取上下文
   const { t } = useI18n();                // 国际化
   const { theme, themes } = useTheme();    // 主题
-  const { signIn } = useAuth();           // 认证
+  const { signIn } = useAuth();          // 认证
 
+
+  // 处理表单验证
+  const validateForm = () => {
+    if (!username.trim()) {
+      Alert.alert(t('auth.tips.title'), t('auth.validation.usernameRequired'));
+      return false;
+    } else if (!password.trim()) {
+      Alert.alert(t('auth.tips.title'), t('auth.validation.passwordRequired'));
+      return false;
+    } else if (password.length < 6) {
+      Alert.alert(t('auth.tips.title'), t('auth.validation.passwordLength'));
+      return false;
+    }
+    return true;
+  };
   /**
    * 处理登录逻辑
    * 使用 async/await 处理异步操作
    */
   const handleLogin = async () => {
-    try {
-      await signIn({ username, password });
-    } catch (error) {
-      console.error('登录失败:', error);
+    if (validateForm()) {
+      const response = await signIn({ username, password });
+      if (response.code === 200) {
+        Alert.alert(t('auth.tips.title'), t('auth.validation.loginSuccess'));
+      } else {
+        Alert.alert(t('auth.tips.title'), t('auth.validation.loginFailed'), [
+          { text: t('common.confirm') }
+        ]);
+      }
     }
   };
 
@@ -46,10 +66,6 @@ export default function LoginScreen({ navigation }: AuthScreenProps) {
       style={[styles.container, { backgroundColor: themes[theme].background }]}
     >
       <View style={styles.logoContainer}>
-        {/* <Image
-          source={require('../../assets/logo.png')}
-          style={styles.logo}
-        /> */}
         <Text style={[styles.welcomeText, { color: themes[theme].text }]}>
           {t('auth.welcome')}
         </Text>
@@ -57,7 +73,7 @@ export default function LoginScreen({ navigation }: AuthScreenProps) {
 
       <View style={styles.formContainer}>
         <TextInput
-          placeholder={t('auth.username')}
+          placeholder={t('auth.placeholder.username')}
           value={username}
           onChangeText={setUsername}
           style={[styles.input, { 
@@ -68,7 +84,7 @@ export default function LoginScreen({ navigation }: AuthScreenProps) {
           placeholderTextColor={themes[theme].placeholder}
         />
         <TextInput
-          placeholder={t('auth.password')}
+          placeholder={t('auth.placeholder.password')}
           value={password}
           onChangeText={setPassword}
           secureTextEntry

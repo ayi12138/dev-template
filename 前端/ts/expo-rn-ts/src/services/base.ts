@@ -56,9 +56,7 @@ api.interceptors.request.use(
       // 直接使用 token，不需要解析
       config.headers.token = token;
       // config.headers.Authorization = `Bearer ${token}`;
-    } else {
-      console.warn('Token 不存在');
-    }
+    } 
     
     return config;
   },
@@ -74,7 +72,7 @@ api.interceptors.request.use(
  */
 api.interceptors.response.use(
   (response: AxiosResponse) => {
-    console.log(response);
+    console.log(response.data);
     return response.data;
   },
   // <T>(response: AxiosResponse<ApiResponse<T>>): T => {

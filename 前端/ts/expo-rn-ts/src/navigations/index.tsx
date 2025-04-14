@@ -92,7 +92,7 @@ const MainTabNavigator = () => {
         name="Home" 
         component={Home}
         options={{
-          title: t('common.home'),
+          title: t('navigation.home'),
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home-outline" size={size} color={color} />
           ),
@@ -102,7 +102,7 @@ const MainTabNavigator = () => {
         name="Settings" 
         component={Settings}
         options={{
-          title: t('common.settings'),
+          title: t('navigation.settings'),
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="settings-outline" size={size} color={color} />
           ),

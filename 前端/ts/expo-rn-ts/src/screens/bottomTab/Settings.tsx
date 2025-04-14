@@ -25,14 +25,14 @@ const Settings = ({ navigation }: SettingsScreenProps) => {
     >
       <View style={styles.section}>
         <Text style={[styles.sectionTitle, { color: themes[theme].text }]}>
-          {t('common.language')}
+          {t('settings.appearance.language.title')}
         </Text>
         <TouchableOpacity
           style={[styles.option, { backgroundColor: themes[theme].card }]}
           onPress={() => setLanguage(language === 'zh_CN' ? 'en_US' : 'zh_CN')}
         >
           <Text style={[styles.optionText, { color: themes[theme].text }]}>
-            {language === 'zh_CN' ? '中文' : 'English'}
+            {t(`settings.appearance.language.${language}`)}
           </Text>
           <Ionicons 
             name="chevron-forward" 
@@ -44,14 +44,14 @@ const Settings = ({ navigation }: SettingsScreenProps) => {
 
       <View style={styles.section}>
         <Text style={[styles.sectionTitle, { color: themes[theme].text }]}>
-          {t('common.theme')}
+          {t('settings.appearance.theme.title')}
         </Text>
         <TouchableOpacity
           style={[styles.option, { backgroundColor: themes[theme].card }]}
           onPress={toggleTheme}
         >
           <Text style={[styles.optionText, { color: themes[theme].text }]}>
-            {theme === 'light' ? t('common.lightTheme') : t('common.darkTheme')}
+            {t(`settings.appearance.theme.${theme}`)}
           </Text>
           <Ionicons 
             name="chevron-forward" 

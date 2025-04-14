@@ -69,7 +69,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           setUser(userInfo);
         }
       } catch (error) {
-        console.error('加载用户信息失败:', error);
         // 如果出错，清除所有存储的信息
         await SecureStore.deleteItemAsync('userToken');
         await SecureStore.deleteItemAsync('userInfo');

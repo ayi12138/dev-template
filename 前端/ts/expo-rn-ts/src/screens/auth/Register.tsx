@@ -52,17 +52,35 @@ const Register = ({ navigation }: AuthScreenProps) => {
     { label: t('auth.worker'), value: 'WORKER' },
   ];
 
+  // 处理表单验证
+  const validateForm = () => {
+    if (!username.trim()) {
+      Alert.alert(t('auth.tips.title'), t('auth.validation.usernameRequired'));
+      return false;
+    } else if (!password.trim()) {
+      Alert.alert(t('auth.tips.title'), t('auth.validation.passwordRequired'));
+      return false;
+    } else if (password.length < 6) {
+      Alert.alert(t('auth.tips.title'), t('auth.validation.passwordLength'));
+      return false;
+    }
+    return true;
+  };
   /**
    * 处理注册逻辑
    * 注册成功后跳转到登录页面
    */
   const handleRegister = async () => {
-    const response = await authService.register({ username, password, role });
-    if (response.code === 200) {
-      navigation.navigate('Login');
-      Alert.alert("注册成功", response.msg);
-    } else {
-      Alert.alert("注册失败", response.msg);
+    if (validateForm()) {
+      const response = await authService.register({ username, password, role });
+      if (response.code === 200) {
+        navigation.navigate('Login');
+        Alert.alert(t('auth.tips.title'), t('auth.validation.registerSuccess'));
+      } else {
+        Alert.alert(t('auth.tips.title'), t('auth.validation.registerFailed'), [
+          { text: t('common.confirm') }
+        ]);
+      }
     }
   };
 
@@ -89,6 +107,7 @@ const Register = ({ navigation }: AuthScreenProps) => {
               {t('auth.username')}
             </Text>
             <TextInput
+              placeholder={t('auth.placeholder.username')}
               value={username}
               onChangeText={setUsername}
               style={[styles.input, { 
@@ -105,6 +124,7 @@ const Register = ({ navigation }: AuthScreenProps) => {
               {t('auth.password')}
             </Text>
             <TextInput
+              placeholder={t('auth.placeholder.password')}
               value={password}
               onChangeText={setPassword}
               secureTextEntry

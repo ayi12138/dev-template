@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
+import { useI18n } from '../contexts/I18nContext';
 
 /**
  * 全屏加载组件
@@ -8,6 +9,7 @@ import { useTheme } from '../contexts/ThemeContext';
  */
 const Loading = () => {
   const { theme, themes } = useTheme();
+  const { t } = useI18n();
 
   return (
     <View style={[
@@ -18,6 +20,12 @@ const Loading = () => {
         size="large" 
         color={themes[theme].primary}
       />
+      <Text style={[
+        styles.loadingText,
+        { color: themes[theme].text }
+      ]}>
+        {t('system.loading')}
+      </Text>
     </View>
   );
 };
@@ -27,6 +35,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  loadingText: {
+    marginTop: 10,
+    fontSize: 16,
   },
 });
 
