@@ -1,0 +1,107 @@
+{
+  "auth": {
+    "username": "用户名",
+    "password": "密码",
+    "login": "登录",
+    "register": "注册",
+    "role": "角色",
+    "user": "普通用户",
+    "worker": "工作人员",
+    "welcome": "欢迎",
+    "noAccount": "还没有账号？",
+    "hasAccount": "已有账号？",
+    "forgotPassword": "忘记密码？",
+    "loginError": "登录失败",
+    "registerError": "注册失败",
+    "registerSubtitle": "创建您的账号",
+    "back": "返回",
+    "validation": {
+      "usernameRequired": "用户名不能为空",
+      "passwordRequired": "密码不能为空",
+      "passwordLength": "密码长度不能小于6位",
+      "registerSuccess": "注册成功",
+      "registerFailed": "注册失败",
+      "loginSuccess": "登录成功",
+      "loginFailed": "登录失败"
+    },
+    "placeholder": {
+      "username": "请输入用户名",
+      "password": "请输入密码"
+    },
+    "tips": {
+      "title": "提示"
+    }
+  },
+  "common": {
+    "home": "首页",
+    "settings": "设置",
+    "theme": "主题",
+    "language": "语言",
+    "logout": "退出登录",
+    "confirm": "确认",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "back": "返回",
+    "lightTheme": "浅色主题",
+    "darkTheme": "深色主题",
+    "logoutConfirm": "确定要退出登录吗？",
+    "error": "错误",
+    "logoutError": "退出登录失败，请重试"
+  },
+  "home": {
+    "user": {
+      "title": "用户首页"
+    },
+    "worker": {
+      "title": "工作人员首页"
+    },
+    "manager": {
+      "title": "管理员首页"
+    }
+  },
+  "system": {
+    "loading": "加载中...",
+    "networkError": "网络错误",
+    "serverError": "服务器错误",
+    "unknownError": "未知错误",
+    "retry": "重试",
+    "initialization": "初始化中...",
+    "dataLoading": "数据加载中..."
+  },
+  "settings": {
+    "title": "设置",
+    "appearance": {
+      "title": "外观",
+      "theme": {
+        "title": "主题",
+        "light": "浅色",
+        "dark": "深色",
+        "system": "跟随系统"
+      },
+      "language": {
+        "title": "语言",
+        "zh_CN": "简体中文",
+        "en_US": "English",
+        "changeSuccess": "语言切换成功",
+        "changeFailed": "语言切换失败"
+      }
+    },
+    "account": {
+      "title": "账号",
+      "profile": "个人资料",
+      "security": "安全设置",
+      "logout": "退出登录",
+      "logoutConfirm": "确定要退出登录吗？",
+      "logoutSuccess": "退出成功",
+      "logoutFailed": "退出失败"
+    }
+  },
+  "navigation": {
+    "back": "返回",
+    "home": "首页",
+    "settings": "设置",
+    "profile": "个人资料"
+  }
+} 

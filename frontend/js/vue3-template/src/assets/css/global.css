@@ -1,0 +1,16 @@
+:root {
+    --baseWidth: 100px;
+    --baseHeight: 50px;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+}
+a {
+    text-decoration: none;
+}
